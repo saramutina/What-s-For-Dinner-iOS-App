@@ -11,7 +11,7 @@ import SwiftUI
 struct What_s_For_DinnerApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RecipesListView()
         }
     }
 }
