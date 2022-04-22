@@ -14,8 +14,8 @@ struct RecipesListView: View {
     var body: some View {
         List {
             ForEach(recipes) { recipe in
-                Text("🍽   \(recipe.mainInformation.name)")
-                    .listRowSeparatorTint(Color.yellow)
+                NavigationLink("🍽 \(recipe.mainInformation.name)",
+                               destination: RecipeDetailView(recipe: recipe))
             }
         }
         .listStyle(.automatic)

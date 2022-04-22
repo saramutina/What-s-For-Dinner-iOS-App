@@ -13,6 +13,7 @@
 		377C2CB7280B8C0A006CBF95 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 377C2CB6280B8C0A006CBF95 /* Preview Assets.xcassets */; };
 		377C2CC0280B8CFE006CBF95 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377C2CBF280B8CFE006CBF95 /* Recipe.swift */; };
 		377C2CC3280FCC8D006CBF95 /* RecipeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377C2CC2280FCC8D006CBF95 /* RecipeData.swift */; };
+		377C2CC52811F73E006CBF95 /* RecipeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377C2CC42811F73E006CBF95 /* RecipeDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		377C2CB6280B8C0A006CBF95 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		377C2CBF280B8CFE006CBF95 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		377C2CC2280FCC8D006CBF95 /* RecipeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeData.swift; sourceTree = "<group>"; };
+		377C2CC42811F73E006CBF95 /* RecipeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				377C2CB1280B8C09006CBF95 /* RecipesListView.swift */,
+				377C2CC42811F73E006CBF95 /* RecipeDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -168,6 +171,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				377C2CC0280B8CFE006CBF95 /* Recipe.swift in Sources */,
+				377C2CC52811F73E006CBF95 /* RecipeDetailView.swift in Sources */,
 				377C2CC3280FCC8D006CBF95 /* RecipeData.swift in Sources */,
 				377C2CB2280B8C09006CBF95 /* RecipesListView.swift in Sources */,
 				377C2CB0280B8C09006CBF95 /* What_s_For_DinnerApp.swift in Sources */,
