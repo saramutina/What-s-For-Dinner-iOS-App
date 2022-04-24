@@ -15,6 +15,7 @@
 		377C2CC3280FCC8D006CBF95 /* RecipeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377C2CC2280FCC8D006CBF95 /* RecipeData.swift */; };
 		377C2CC52811F73E006CBF95 /* RecipeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377C2CC42811F73E006CBF95 /* RecipeDetailView.swift */; };
 		377C2CC728124638006CBF95 /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377C2CC628124638006CBF95 /* AppColor.swift */; };
+		377C2CE32814F64B006CBF95 /* RecipeCategoryGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377C2CE22814F64B006CBF95 /* RecipeCategoryGridView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		377C2CC2280FCC8D006CBF95 /* RecipeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeData.swift; sourceTree = "<group>"; };
 		377C2CC42811F73E006CBF95 /* RecipeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailView.swift; sourceTree = "<group>"; };
 		377C2CC628124638006CBF95 /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
+		377C2CE22814F64B006CBF95 /* RecipeCategoryGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCategoryGridView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,7 +92,7 @@
 			children = (
 				377C2CB1280B8C09006CBF95 /* RecipesListView.swift */,
 				377C2CC42811F73E006CBF95 /* RecipeDetailView.swift */,
-				377C2CC628124638006CBF95 /* AppColor.swift */,
+				377C2CE22814F64B006CBF95 /* RecipeCategoryGridView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -98,6 +100,7 @@
 		377C2CC1280DFB4D006CBF95 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				377C2CC628124638006CBF95 /* AppColor.swift */,
 				377C2CC2280FCC8D006CBF95 /* RecipeData.swift */,
 			);
 			path = ViewModels;
@@ -175,6 +178,7 @@
 			files = (
 				377C2CC0280B8CFE006CBF95 /* Recipe.swift in Sources */,
 				377C2CC52811F73E006CBF95 /* RecipeDetailView.swift in Sources */,
+				377C2CE32814F64B006CBF95 /* RecipeCategoryGridView.swift in Sources */,
 				377C2CC3280FCC8D006CBF95 /* RecipeData.swift in Sources */,
 				377C2CB2280B8C09006CBF95 /* RecipesListView.swift in Sources */,
 				377C2CB0280B8C09006CBF95 /* What_s_For_DinnerApp.swift in Sources */,
