@@ -58,6 +58,7 @@ struct RecipeDetailView: View {
             }
         }
         .navigationTitle(recipe.mainInformation.name)
+        .navigationBarTitleDisplayMode(.large)
     }
 }
 

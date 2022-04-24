@@ -9,13 +9,13 @@ import SwiftUI
 
 struct AppColor {
     static let background: Color = Color(.sRGB,
-                                         red: 255/255,
-                                         green: 245/255,
-                                         blue: 235/255,
+                                         red: 233/255,
+                                         green: 255/255,
+                                         blue: 219/255,
                                          opacity: 1)
     static let foreground: Color = Color(.sRGB,
-                                           red: 226/255,
-                                           green: 88/255,
-                                           blue: 34/255,
+                                           red: 0/255,
+                                           green: 66/255,
+                                           blue: 37/255,
                                            opacity: 1)
 }

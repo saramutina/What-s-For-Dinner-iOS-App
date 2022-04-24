@@ -9,4 +9,29 @@ import Foundation
 
 class RecipeData: ObservableObject {
     @Published var recipes = Recipe.testRecipes
+    
+    // filter recipes:
+    func recipes(for category: MainInformation.Category) -> [Recipe] {
+        var filteredRecipes = [Recipe]()
+        for recipe in recipes {
+            if recipe.mainInformation.category == category {
+                filteredRecipes.append(recipe)
+            }
+        }
+        return filteredRecipes
+    }
+    
+    func getEmoji(for category: MainInformation.Category) -> String {
+        switch category {
+        case .breakfast:
+            return "🥞"
+        case .lunch:
+            return "🥗"
+        case .dinner:
+            return "🍲"
+        case .dessert:
+            return "🧁"
+        }
+    }
+    
 }
