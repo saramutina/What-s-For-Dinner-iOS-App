@@ -21,6 +21,12 @@ class RecipeData: ObservableObject {
         return filteredRecipes
     }
     
+    func add(_ recipe: Recipe) {
+        if recipe.isVaid {
+            recipes.append(recipe)
+        }
+    }
+    
     func getEmoji(for category: MainInformation.Category) -> String {
         switch category {
         case .breakfast:

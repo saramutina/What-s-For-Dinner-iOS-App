@@ -26,6 +26,10 @@ struct Recipe: Identifiable {
                   ingredients: [],
                   directions: [])
       }
+    
+    var isVaid: Bool {
+        mainInformation.isValid && !ingredients.isEmpty && !directions.isEmpty
+    }
 }
 
 struct MainInformation {
@@ -39,6 +43,10 @@ struct MainInformation {
         case lunch = "Lunch"
         case dinner = "Dinner"
         case dessert = "Dessert"
+    }
+    
+    var isValid: Bool {
+        !name.isEmpty && !description.isEmpty && !author.isEmpty
     }
 }
 
