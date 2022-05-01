@@ -13,6 +13,11 @@ struct AppColor {
                                          green: 255/255,
                                          blue: 219/255,
                                          opacity: 1)
+    static let backgroundDarker: Color = Color(.sRGB,
+                                               red: 223/255,
+                                               green: 245/255,
+                                               blue: 209/255,
+                                               opacity: 1)
     static let foreground: Color = Color(.sRGB,
                                            red: 0/255,
                                            green: 66/255,

@@ -20,7 +20,7 @@ struct Recipe: Identifiable {
         self.directions = directions
     }
     
-    // Intitializer for empty recipes for user to edit later:
+    // Another intitializer for empty recipes for user to edit later:
     init() {
         self.init(mainInformation: MainInformation(name: "", description: "", author: "", category: .breakfast),
                   ingredients: [],
@@ -73,14 +73,25 @@ struct Ingredient {
     enum Unit: String, CaseIterable {
         case g = "Grams"
         case oz = "Ounces"
-        case cups = "Cups"
-        case tbs = "Tablespoons"
-        case tsp = "Teaspoons"
+        case cups = "🥛 Cups"
+        case tbs = "🥄 Tablespoons"
+        case tsp = "🥄 Teaspoons"
         case none = "No units"
         
         var singularName: String {
             String(rawValue.dropLast())
         }
+    }
+    
+    init(name: String, quantity: Double, unit: Unit) {
+        self.name = name
+        self.quantity = quantity
+        self.unit = unit
+    }
+    
+    // Another intitializer for empty recipes to edit later:
+    init() {
+        self.init(name: "", quantity: 1, unit: .none)
     }
     
 }
