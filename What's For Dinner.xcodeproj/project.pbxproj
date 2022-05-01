@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		371AF949281EF41E00D9E28E /* ModifyMainInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371AF948281EF41E00D9E28E /* ModifyMainInformationView.swift */; };
 		377C2CB0280B8C09006CBF95 /* What_s_For_DinnerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377C2CAF280B8C09006CBF95 /* What_s_For_DinnerApp.swift */; };
 		377C2CB2280B8C09006CBF95 /* RecipesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377C2CB1280B8C09006CBF95 /* RecipesListView.swift */; };
 		377C2CB4280B8C0A006CBF95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 377C2CB3280B8C0A006CBF95 /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		371AF948281EF41E00D9E28E /* ModifyMainInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyMainInformationView.swift; sourceTree = "<group>"; wrapsLines = 1; };
 		377C2CAC280B8C09006CBF95 /* What's For Dinner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "What's For Dinner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		377C2CAF280B8C09006CBF95 /* What_s_For_DinnerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = What_s_For_DinnerApp.swift; sourceTree = "<group>"; };
 		377C2CB1280B8C09006CBF95 /* RecipesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesListView.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				37E59B242816D68700589C2C /* ModifyRecipeView.swift */,
+				371AF948281EF41E00D9E28E /* ModifyMainInformationView.swift */,
 			);
 			path = ModifyRecipes;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 				37E59B252816D68700589C2C /* ModifyRecipeView.swift in Sources */,
 				377C2CB2280B8C09006CBF95 /* RecipesListView.swift in Sources */,
 				377C2CB0280B8C09006CBF95 /* What_s_For_DinnerApp.swift in Sources */,
+				371AF949281EF41E00D9E28E /* ModifyMainInformationView.swift in Sources */,
 				377C2CC728124638006CBF95 /* AppColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
