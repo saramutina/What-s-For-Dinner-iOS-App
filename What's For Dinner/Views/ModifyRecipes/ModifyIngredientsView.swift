@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ModifyIngerdientsView: View {
+struct ModifyIngredientsView: View {
     @Binding var ingredients: [Ingredient]
     @State private var newIngredient = Ingredient()
     
@@ -43,10 +43,10 @@ struct ModifyIngredientsView_Previews: PreviewProvider {
     @State static var emptyIngredients = [Ingredient]()
     static var previews: some View {
         NavigationView {
-            ModifyIngerdientsView(ingredients: $recipe.ingredients)
+            ModifyIngredientsView(ingredients: $recipe.ingredients)
         }
         NavigationView {
-            ModifyIngerdientsView(ingredients: $emptyIngredients)
+            ModifyIngredientsView(ingredients: $emptyIngredients)
         }
     }
 }
