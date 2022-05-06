@@ -50,7 +50,7 @@ struct MainInformation {
     }
 }
 
-struct Ingredient {
+struct Ingredient: RecipeComponent {
     var name: String
     var quantity: Double
     var unit: Unit
@@ -96,9 +96,19 @@ struct Ingredient {
     
 }
 
-struct Direction {
+struct Direction: RecipeComponent {
     var description: String
     var isOptional: Bool
+    
+    init(description: String, isOptional: Bool) {
+        self.description = description
+        self.isOptional = isOptional
+    }
+    
+    // Another intitializer for empty recipes to edit later:
+    init() {
+        self.init(description: "", isOptional: false)
+    }
 }
 
 
