@@ -10,6 +10,15 @@ import Foundation
 class RecipeData: ObservableObject {
     @Published var recipes = Recipe.testRecipes
     
+    func index(of recipe: Recipe) -> Int? {
+        for i in recipes.indices {
+            if recipes[i].id == recipe.id {
+                return i
+            }
+        }
+        return nil
+    }
+    
     // filter recipes:
     func recipes(for category: MainInformation.Category) -> [Recipe] {
         var filteredRecipes = [Recipe]()

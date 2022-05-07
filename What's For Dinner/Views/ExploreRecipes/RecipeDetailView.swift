@@ -9,7 +9,8 @@ import SwiftUI
 import Foundation
 
 struct RecipeDetailView: View {
-    let recipe: Recipe
+    @Binding var recipe: Recipe
+    @State var isPresenting: Bool = false
     
     private let listBackgroundColor = AppColor.background
     private let listTextColor = AppColor.foreground
@@ -59,6 +60,26 @@ struct RecipeDetailView: View {
         }
         .navigationTitle(recipe.mainInformation.name)
         .navigationBarTitleDisplayMode(.large)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button("Edit") {
+                    isPresenting = true
+                }
+            }
+        }
+        .sheet(isPresented: $isPresenting) {
+            NavigationView {
+                ModifyRecipeView(recipe: $recipe)
+                    .toolbar {
+                        ToolbarItem(placement: .confirmationAction) {
+                            Button("Save") {
+                                isPresenting = false
+                            }
+                        }
+                    }
+                    .navigationTitle("Edit Recipe")
+            }
+        }
     }
 }
 
@@ -66,7 +87,7 @@ struct RecipeDetailView_Previews: PreviewProvider {
     @State static var recipe = Recipe.testRecipes[1]
     static var previews: some View {
         NavigationView {
-            RecipeDetailView(recipe: recipe)
+            RecipeDetailView(recipe: $recipe)
         }
     }
 }
