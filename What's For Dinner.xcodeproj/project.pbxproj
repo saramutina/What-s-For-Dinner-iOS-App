@@ -11,6 +11,7 @@
 		371AF94B281F03D700D9E28E /* ModifyIngredientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371AF94A281F03D700D9E28E /* ModifyIngredientView.swift */; };
 		371AF94D281F0A4400D9E28E /* ModifyComponentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371AF94C281F0A4400D9E28E /* ModifyComponentsView.swift */; };
 		371AF94F28231DBA00D9E28E /* ModifyDirectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371AF94E28231DBA00D9E28E /* ModifyDirectionView.swift */; };
+		3728AC9F282AEE4800BF19DE /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3728AC9E282AEE4800BF19DE /* MainTabView.swift */; };
 		377C2CB0280B8C09006CBF95 /* What_s_For_DinnerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377C2CAF280B8C09006CBF95 /* What_s_For_DinnerApp.swift */; };
 		377C2CB2280B8C09006CBF95 /* RecipesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377C2CB1280B8C09006CBF95 /* RecipesListView.swift */; };
 		377C2CB4280B8C0A006CBF95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 377C2CB3280B8C0A006CBF95 /* Assets.xcassets */; };
@@ -28,6 +29,7 @@
 		371AF94A281F03D700D9E28E /* ModifyIngredientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyIngredientView.swift; sourceTree = "<group>"; };
 		371AF94C281F0A4400D9E28E /* ModifyComponentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyComponentsView.swift; sourceTree = "<group>"; };
 		371AF94E28231DBA00D9E28E /* ModifyDirectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyDirectionView.swift; sourceTree = "<group>"; };
+		3728AC9E282AEE4800BF19DE /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		377C2CAC280B8C09006CBF95 /* What's For Dinner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "What's For Dinner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		377C2CAF280B8C09006CBF95 /* What_s_For_DinnerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = What_s_For_DinnerApp.swift; sourceTree = "<group>"; };
 		377C2CB1280B8C09006CBF95 /* RecipesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesListView.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 			children = (
 				37E59B212816D4AA00589C2C /* ModifyRecipes */,
 				37E59B202816D48E00589C2C /* ExploreRecipes */,
+				3728AC9E282AEE4800BF19DE /* MainTabView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -214,6 +217,7 @@
 				371AF94F28231DBA00D9E28E /* ModifyDirectionView.swift in Sources */,
 				37E59B252816D68700589C2C /* ModifyRecipeView.swift in Sources */,
 				377C2CB2280B8C09006CBF95 /* RecipesListView.swift in Sources */,
+				3728AC9F282AEE4800BF19DE /* MainTabView.swift in Sources */,
 				371AF94D281F0A4400D9E28E /* ModifyComponentsView.swift in Sources */,
 				377C2CB0280B8C09006CBF95 /* What_s_For_DinnerApp.swift in Sources */,
 				371AF949281EF41E00D9E28E /* ModifyMainInformationView.swift in Sources */,

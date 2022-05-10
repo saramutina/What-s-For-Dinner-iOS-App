@@ -62,8 +62,15 @@ struct RecipeDetailView: View {
         .navigationBarTitleDisplayMode(.large)
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
-                Button("Edit") {
-                    isPresenting = true
+                HStack {
+                    Button("Edit") {
+                        isPresenting = true
+                    }
+                    Button(action: {
+                        recipe.isFavorite.toggle()
+                    }, label: {
+                        Image(systemName: recipe.isFavorite ? "heart.fill" : "heart")
+                    })
                 }
             }
         }
