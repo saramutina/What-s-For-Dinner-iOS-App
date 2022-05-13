@@ -12,8 +12,9 @@ struct RecipeDetailView: View {
     @Binding var recipe: Recipe
     @State var isPresenting: Bool = false
     
-    private let listBackgroundColor = AppColor.background
-    private let listTextColor = AppColor.foreground
+    @AppStorage("listBackgroundColor") private var listBackgroundColor = AppColor.background
+    @AppStorage("listTextColor") private var listTextColor = AppColor.foreground
+    @AppStorage("buttonColor") private var buttonColor = AppColor.button
     
     var body: some View {
         VStack {

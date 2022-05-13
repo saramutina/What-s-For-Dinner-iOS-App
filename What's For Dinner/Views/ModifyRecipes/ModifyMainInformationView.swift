@@ -9,16 +9,19 @@ import SwiftUI
 
 struct ModifyMainInformationView: View {
     @Binding var mainInformaition: MainInformation
+    @AppStorage("listBackgroundColor") private var listBackgroundColor = AppColor.background
+    @AppStorage("listTextColor") private var listTextColor = AppColor.foreground
+    @AppStorage("buttonColor") private var buttonColor = AppColor.button
     
     var body: some View {
         Form {
             TextField("Recipe Name", text: $mainInformaition.name)
-                .listRowBackground(AppColor.background)
+                .listRowBackground(listBackgroundColor)
             TextField("Author", text: $mainInformaition.author)
-                .listRowBackground(AppColor.background)
+                .listRowBackground(listBackgroundColor)
             Section(header: Text("Description")) {
                 TextEditor(text: $mainInformaition.description)
-                    .listRowBackground(AppColor.background)
+                    .listRowBackground(listBackgroundColor)
             }
             Section(header: Text("Category")) {
                 Picker("Select category", selection: $mainInformaition.category) {
@@ -27,10 +30,10 @@ struct ModifyMainInformationView: View {
                     }
                 }
                 .pickerStyle(.segmented)
-                .listRowBackground(AppColor.background)
+                .listRowBackground(listBackgroundColor)
             }
         }
-        .foregroundColor(AppColor.foreground)
+        .foregroundColor(listTextColor)
     }
 }
 

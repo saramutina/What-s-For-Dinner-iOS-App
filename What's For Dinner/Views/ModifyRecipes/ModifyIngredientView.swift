@@ -19,10 +19,14 @@ struct ModifyIngredientView: ModifyComponentView {
     
     @Environment(\.presentationMode) private var mode
     
+    @AppStorage("listBackgroundColor") private var listBackgroundColor = AppColor.background
+    @AppStorage("listTextColor") private var listTextColor = AppColor.foreground
+    @AppStorage("buttonColor") private var buttonColor = AppColor.button
+    
     var body: some View {
         Form {
             TextField("Ingredient Name", text: $ingredient.name)
-                .listRowBackground(AppColor.background)
+                .listRowBackground(listBackgroundColor)
             Stepper(value: $ingredient.quantity, in: 0...100, step: 0.5) {
                 HStack {
                     Text("Quantity")
@@ -32,14 +36,14 @@ struct ModifyIngredientView: ModifyComponentView {
                     .keyboardType(.numbersAndPunctuation)
                 }
             }
-            .listRowBackground(AppColor.background)
+            .listRowBackground(listBackgroundColor)
             Picker("Unit", selection: $ingredient.unit) {
                 ForEach(Ingredient.Unit.allCases, id: \.self) { unit in
                     Text(unit.rawValue).tag(unit)
                 }
             }
             .pickerStyle(.menu)
-            .listRowBackground(AppColor.background)
+            .listRowBackground(listBackgroundColor)
             HStack {
                 Spacer()
                 Button("Save") {
@@ -48,9 +52,9 @@ struct ModifyIngredientView: ModifyComponentView {
                 }
                 Spacer()
             }
-            .listRowBackground(AppColor.backgroundDarker)
+            .listRowBackground(buttonColor)
         }
-        .foregroundColor(AppColor.foreground)
+        .foregroundColor(listTextColor)
     }
 }
 

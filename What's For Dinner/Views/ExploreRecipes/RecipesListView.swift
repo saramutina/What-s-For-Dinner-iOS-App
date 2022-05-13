@@ -15,8 +15,9 @@ struct RecipesListView: View {
     @State var isPresenting: Bool = false
     @State var newRecipe = Recipe()
     
-    private let listBackgroundColor = AppColor.background
-    private let listTextColor = AppColor.foreground
+    @AppStorage("listBackgroundColor") private var listBackgroundColor = AppColor.background
+    @AppStorage("listTextColor") private var listTextColor = AppColor.foreground
+    @AppStorage("buttonColor") private var buttonColor = AppColor.button
     
     var body: some View {
         List {
@@ -25,7 +26,6 @@ struct RecipesListView: View {
                                destination: RecipeDetailView(recipe: binding(for: recipe)))
             }
             .listRowBackground(listBackgroundColor)
-            .listRowSeparatorTint(listTextColor)
             .foregroundColor(listTextColor)
         }
         .listStyle(.automatic)

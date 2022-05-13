@@ -19,12 +19,16 @@ struct ModifyDirectionView: ModifyComponentView {
     
     @Environment(\.presentationMode) private var mode
     
+    @AppStorage("listBackgroundColor") private var listBackgroundColor = AppColor.background
+    @AppStorage("listTextColor") private var listTextColor = AppColor.foreground
+    @AppStorage("buttonColor") private var buttonColor = AppColor.button
+    
     var body: some View {
         Form {
             TextField("Direction", text: $direction.description)
-                .listRowBackground(AppColor.background)
+                .listRowBackground(listBackgroundColor)
             Toggle("Optional", isOn: $direction.isOptional)
-                .listRowBackground(AppColor.background)
+                .listRowBackground(listBackgroundColor)
             HStack {
                 Spacer()
                 Button("Save") {
@@ -33,9 +37,9 @@ struct ModifyDirectionView: ModifyComponentView {
                 }
                 Spacer()
             }
-            .listRowBackground(AppColor.backgroundDarker)
+            .listRowBackground(buttonColor)
         }
-        .foregroundColor(AppColor.foreground)
+        .foregroundColor(listTextColor)
     }
 }
 

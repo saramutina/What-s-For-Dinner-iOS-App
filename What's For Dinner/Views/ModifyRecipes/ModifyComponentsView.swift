@@ -32,6 +32,9 @@ struct ModifyComponentsView<Component: RecipeComponent, DestinationView: ModifyC
     @Binding var components: [Component]
     @State private var newComponent = Component()
     
+    @AppStorage("listBackgroundColor") private var listBackgroundColor = AppColor.background
+    @AppStorage("listTextColor") private var listTextColor = AppColor.foreground
+    @AppStorage("buttonColor") private var buttonColor = AppColor.button
     
     var body: some View {
         VStack {
@@ -67,9 +70,9 @@ struct ModifyComponentsView<Component: RecipeComponent, DestinationView: ModifyC
                     .onMove { indices, newOffset in
                         components.move(fromOffsets: indices, toOffset: newOffset)
                     }
-                    .listRowBackground(AppColor.background)
+                    .listRowBackground(listBackgroundColor)
                     NavigationLink("Add another \(Component.singularName())", destination: addComponentView)
-                        .listRowBackground(AppColor.backgroundDarker)
+                        .listRowBackground(buttonColor)
                         .buttonStyle(.plain)
                 }
             }
