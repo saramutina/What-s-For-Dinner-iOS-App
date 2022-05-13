@@ -16,6 +16,8 @@ struct RecipeDetailView: View {
     @AppStorage("listTextColor") private var listTextColor = AppColor.foreground
     @AppStorage("buttonColor") private var buttonColor = AppColor.button
     
+    @AppStorage("hideOptionalSteps") private var hideOptionalSteps: Bool = false
+    
     var body: some View {
         VStack {
             HStack {
@@ -42,19 +44,22 @@ struct RecipeDetailView: View {
                 Section(header: Text("Directions")) {
                     ForEach(recipe.directions.indices, id: \.self) { index in
                         let direction = recipe.directions[index]
-                        
-                        HStack {
-                            Text("\(index + 1). ").bold()
-                            Group{
-                                Text(" \(direction.isOptional ? "Optional  " : "")")
-                                    .italic()
-                                    .foregroundColor(Color.purple)
-                                +
-                                Text(direction.description)
+                        if direction.isOptional && hideOptionalSteps {
+                            EmptyView()
+                        } else {
+                            HStack {
+                                let index = recipe.index(of: direction, excludingOptionalDirections: hideOptionalSteps) ?? 0
+                                Text("\(index + 1). ").bold()
+                                Group{
+                                    Text(" \(direction.isOptional ? "Optional  " : "")")
+                                        .italic()
+                                        .foregroundColor(listTextColor.opacity(0.7))
+                                    +
+                                    Text(direction.description)
+                                }
                             }
+                            .foregroundColor(listTextColor)
                         }
-                        .foregroundColor(listTextColor)
-                        .listRowSeparatorTint(listTextColor)
                     }
                 }.listRowBackground(listBackgroundColor)
             }
