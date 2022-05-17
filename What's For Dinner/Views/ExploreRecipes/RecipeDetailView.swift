@@ -75,6 +75,7 @@ struct RecipeDetailView: View {
                     }
                     Button(action: {
                         recipe.isFavorite.toggle()
+                        recipeData.saveRecipes()
                     }, label: {
                         Image(systemName: recipe.isFavorite ? "heart.fill" : "heart")
                     })

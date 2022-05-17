@@ -25,6 +25,10 @@ struct RecipesListView: View {
                 NavigationLink("\(recipeData.getEmoji(for: recipe.mainInformation.category)) \(recipe.mainInformation.name)",
                                destination: RecipeDetailView(recipe: binding(for: recipe)))
             }
+            .onDelete {
+                recipeData.deleteRecipe(for: viewStyle, atOffsets: $0)
+                recipeData.saveRecipes()
+            }
             .listRowBackground(listBackgroundColor)
             .foregroundColor(listTextColor)
         }
@@ -32,6 +36,9 @@ struct RecipesListView: View {
         .navigationTitle(navigationTitle)
         .navigationBarTitleDisplayMode(.large)
         .toolbar(content: {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                EditButton()
+            }
             ToolbarItem(placement: .navigationBarTrailing, content: {
                 Button(action: {
                     newRecipe = Recipe()

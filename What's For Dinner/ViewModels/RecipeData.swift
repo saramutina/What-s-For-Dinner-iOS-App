@@ -76,6 +76,19 @@ class RecipeData: ObservableObject {
         }
     }
     
+    func deleteRecipe(for viewStyle: RecipesListView.ViewStyle, atOffsets offsets: IndexSet) {
+        let filteredIndex = offsets[offsets.startIndex]
+        var recipeToDelete: Recipe
+        switch viewStyle {
+        case .favorites:
+            recipeToDelete = favoriteRecipes[filteredIndex]
+        case let .singleCategory(category):
+            recipeToDelete = recipes(for: category)[filteredIndex]
+        }
+        guard let indexOfRecipeToDelete = recipes.firstIndex(where: {$0.id == recipeToDelete.id}) else { return }
+        recipes.remove(at: indexOfRecipeToDelete)
+    }
+    
     // file location to store recipes:
     private var recipesFileURL: URL {
         do {
