@@ -58,7 +58,7 @@ struct ModifyComponentsView<Component: RecipeComponent, DestinationView: ModifyC
                 List {
                     ForEach(components.indices, id: \.self) { index in
                         let component = components[index]
-                        // destination fot link:
+                        // destination for link:
                         let editComponentView = DestinationView(component: $components[index]) { _ in return }
                             .navigationTitle("Edit \(Component.singularName().capitalized)")
                         // text + link to edit each component:

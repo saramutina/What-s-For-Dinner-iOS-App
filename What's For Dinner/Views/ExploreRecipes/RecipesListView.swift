@@ -27,7 +27,6 @@ struct RecipesListView: View {
             }
             .onDelete {
                 recipeData.deleteRecipe(for: viewStyle, atOffsets: $0)
-                recipeData.saveRecipes()
             }
             .listRowBackground(listBackgroundColor)
             .foregroundColor(listTextColor)

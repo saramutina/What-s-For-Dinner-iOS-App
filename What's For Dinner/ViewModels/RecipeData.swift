@@ -78,15 +78,20 @@ class RecipeData: ObservableObject {
     
     func deleteRecipe(for viewStyle: RecipesListView.ViewStyle, atOffsets offsets: IndexSet) {
         let filteredIndex = offsets[offsets.startIndex]
-        var recipeToDelete: Recipe
+        var chosenRecipe: Recipe
         switch viewStyle {
         case .favorites:
-            recipeToDelete = favoriteRecipes[filteredIndex]
+            //Unfavorite recipe if it is deleted from "Favorites" view
+            chosenRecipe = favoriteRecipes[filteredIndex]
+            guard let indexOfRecipeToUnfavorite = recipes.firstIndex(where: {$0.id == chosenRecipe.id}) else { return }
+            recipes[indexOfRecipeToUnfavorite].isFavorite.toggle()
+            saveRecipes()
         case let .singleCategory(category):
-            recipeToDelete = recipes(for: category)[filteredIndex]
+            chosenRecipe = recipes(for: category)[filteredIndex]
+            guard let indexOfRecipeToDelete = recipes.firstIndex(where: {$0.id == chosenRecipe.id}) else { return }
+            recipes.remove(at: indexOfRecipeToDelete)
+            saveRecipes()
         }
-        guard let indexOfRecipeToDelete = recipes.firstIndex(where: {$0.id == recipeToDelete.id}) else { return }
-        recipes.remove(at: indexOfRecipeToDelete)
     }
     
     // file location to store recipes:
